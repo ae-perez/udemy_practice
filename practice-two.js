@@ -29,7 +29,7 @@ function percentageOfWorld1(population) {
   return percentage;
 }
 
-/*var percentageOfWorld2 = function () {
+var percentageOfWorld2 = function () {
   return `world2: ${Math.round((population / 7900) * 100)}%`;
 };
 
@@ -38,7 +38,7 @@ var percentageworld3 = (population) => {
   return console.log(`world3: ${Math.round((population / 7900) * 100)}%\n`);
 };
 
-console.log(`world1: ${Math.round(percentageOfWorld1(population))}%`);
+/*console.log(`world1: ${Math.round(percentageOfWorld1(population))}%`);
 console.log(percentageOfWorld2());
 percentageworld3(population);
 population = 1000000;
@@ -150,8 +150,22 @@ for (var i = 0; i < populations.length; i++) {
 console.log(percentages2);
 
 //looping backwards and loops in loops
-var listOfNeighbors = [
+var listOfNeighbours = [
   ['Canada', 'Mexico'],
   ['Spain'],
   ['Norway', 'Sweden', 'Russia'],
 ];
+
+console.log(listOfNeighbours.length);
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let j = 0; j < listOfNeighbours[i].length; j++)
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+
+//the while loop
+var i = 0;
+var percentages3 = [];
+while (i < populations.length) {
+  percentages3.push(Math.round(percentageOfWorld1(populations[i])));
+  i++;
+}
+console.log(percentages3);
