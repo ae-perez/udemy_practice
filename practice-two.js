@@ -150,4 +150,8 @@ for (var i = 0; i < populations.length; i++) {
 console.log(percentages2);
 
 //looping backwards and loops in loops
-var listOfNeighbors = [];
+var listOfNeighbors = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia'],
+];
