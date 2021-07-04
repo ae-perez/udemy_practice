@@ -93,3 +93,37 @@ console.log(
     ? 'Probably not a central European country!'
     : 'Germany is a neighbouring country!'
 );
+
+match = 'Honduras';
+for (var i = 0; i < neighbours.length; i++) {
+  if (neighbours[i] == match) {
+    neighbours[i] = 'Republic of Honduras';
+  }
+}
+console.log(neighbours);
+
+//introduction to objects
+var myCountry = {
+  country: 'Canada',
+  capital: 'Ottawa',
+  language: 'English',
+  population: 37.59,
+  neighbours: ['Alaska', 'United States', 'Greenland'],
+};
+
+//dot vs bracket notation
+//'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+);
+myCountry.population += 2;
+console.log(myCountry.population);
+myCountry['population'] = 37.59 - 2;
+console.log(myCountry.population);
+
+//object methods
+myCountry.describe = console.log(
+  `${this.country} has ${this.population} million`
+);
+
+console.log(myCountry.describe);
