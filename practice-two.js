@@ -1,4 +1,4 @@
-function describeCountry(country, population, capitalCity) {
+/*function describeCountry(country, population, capitalCity) {
   return `${country} has ${population} people and its capital city is ${capitalCity}.`;
 }
 
@@ -19,7 +19,7 @@ country = 'United States of America';
 population = 50000000;
 capitalCity = 'Washington';
 describe = describeCountry(country, population, capitalCity);
-console.log(describe);
+console.log(describe);*/
 
 //Function Declarations vs Expressions
 function percentageOfWorld1(population) {
@@ -29,7 +29,7 @@ function percentageOfWorld1(population) {
   return percentage;
 }
 
-var percentageOfWorld2 = function () {
+/*var percentageOfWorld2 = function () {
   return `world2: ${Math.round((population / 7900) * 100)}%`;
 };
 
@@ -109,6 +109,16 @@ var myCountry = {
   language: 'English',
   population: 37.59,
   neighbours: ['Alaska', 'United States', 'Greenland'],
+  isIsland: false,
+  //these are the methods of the object
+  describe: function () {
+    return console.log(
+      `${this.country} has ${this.population} million speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+  },
 };
 
 //dot vs bracket notation
@@ -122,8 +132,22 @@ myCountry['population'] = 37.59 - 2;
 console.log(myCountry.population);
 
 //object methods
-myCountry.describe = console.log(
-  `${this.country} has ${this.population} million`
-);
+myCountry.describe(); //never forget to add the brackets for method calling of an object -- don't put it in console.log
+myCountry.checkIsland();
+console.log(myCountry); //this is if you check what the outcome of the functhing checkIsland works out
 
-console.log(myCountry.describe);
+//iteration for the loops
+for (var i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is currently voting.`);
+}*/
+
+//looping arrays, breaking and continuing
+var populations = [53000, 63500, 70000000, 9000000];
+var percentages2 = [];
+for (var i = 0; i < populations.length; i++) {
+  percentages2.push(Math.round(percentageOfWorld1(populations[i])));
+}
+console.log(percentages2);
+
+//looping backwards and loops in loops
+var listOfNeighbors = [];
